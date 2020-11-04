@@ -1,0 +1,17 @@
+.logo {
+  svg {
+    width: 100%;
+    height: auto;
+    vertical-align: bottom;
+  }
+  &_dark {
+    * {
+      fill: $greyDark;
+    }
+  }
+  &_white {
+    * {
+      fill: #fff;
+    }
+  }
+}

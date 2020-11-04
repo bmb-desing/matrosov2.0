@@ -1,0 +1,49 @@
+.first-screen {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(#000, 0.35);
+  }
+
+  &__slider {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: em(32) 0;
+    transform: translateY(-50%);
+    @include media(768) {
+      padding: em(64) 0;
+    }
+    @include media(992) {
+      padding: em(112) 0;
+    }
+  }
+
+  &__title {
+    font-size: em(72);
+    font-weight: 800;
+    color: #fff;
+    max-width: 550px;
+    line-height: 1.1;
+  }
+
+  &__description {
+    padding-top: em(16);
+    color: #fff;
+    font-size: em(22);
+    max-width: 500px;
+    line-height: 1.4;
+  }
+}

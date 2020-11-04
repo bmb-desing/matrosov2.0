@@ -1,0 +1,52 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 320px;
+  line-height: 1.5;
+  font-size: 16px;
+  overflow-x: hidden;
+  font-family: "SF Pro Display", sans-serif;
+  background-color: #000;
+}
+
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+
+  &_small {
+    max-width: 960px;
+  }
+
+  &_flex {
+    display: flex;
+  }
+
+  &_jcsb {
+    justify-content: space-between;
+  }
+
+  &_aic {
+    align-items: center;
+  }
+}
+
+.section {
+  &_full {
+    min-height: 100vh;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}

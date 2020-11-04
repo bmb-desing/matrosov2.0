@@ -1,0 +1,174 @@
+.header {
+  padding: em(16) 0;
+  @include media(768) {
+    padding: em(32) 0;
+  }
+  @include media(992) {
+    padding: em(56) 0;
+  }
+
+  &_transparent {
+    background-color: transparent;
+  }
+  &_dark {
+    background-color: #171717;
+  }
+  &_white {
+    background-color: #fff;
+  }
+
+  &_fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $headerIndex;
+  }
+  &_absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: $headerIndex;
+  }
+
+  &__logo {
+    max-width: 143px;
+  }
+
+  &__right {
+    @include media(768) {
+      flex-basis: 40%;
+    }
+    @include media(992) {
+      flex-basis: 70%;
+    }
+  }
+
+  &__menu {
+    display: none;
+    flex-basis: 431px;
+    @include media(992) {
+      display: block;
+    }
+    ul {
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    a {
+      text-decoration: none;
+      font-size: em(14);
+      font-weight: 500;
+    }
+
+    &_white {
+      a {
+        color: #fff;
+      }
+    }
+    &_dark {
+      a {
+        color: $greyDark;
+      }
+    }
+  }
+
+  &__callback {
+    flex-basis: 170px;
+    display: none;
+    @include media(768) {
+      display: block;
+    }
+  }
+
+  &__phone {
+    font-size: em(14);
+    text-decoration: none;
+    &_white {
+      color: #fff;
+    }
+    &_dark {
+      color: $greyDark;
+    }
+  }
+
+  &__social {
+    position: relative;
+  }
+
+  &__list {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    right: 0;
+    display: none;
+    text-align: center;
+    margin-top: em(16);
+    border-radius: 20px;
+    border: 1px solid;
+    padding: em(8) 0;
+    &_white {
+      border-color: #e0e0e0;
+    }
+    &_dark {
+      border-color: $greyDark;
+    }
+    ul {
+      list-style-type: none;
+    }
+  }
+
+  &__dots {
+    cursor: pointer;
+    position: relative;
+    width: 32px;
+    height: 32px;
+    border-radius: 10em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    transition: all 0.5s;
+    border: 1px solid;
+    &_white {
+      border-color: #fff;
+      color: #fff;
+    }
+    &_dark {
+      border-color: $greyDark;
+      color: $greyDark;
+    }
+
+    &.active {
+      transform: rotate(0deg);
+    }
+  }
+
+  &__burger {
+    flex-basis: 24px;
+    justify-self: flex-end;
+    cursor: pointer;
+    width: 24px;
+    height: 18px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    &_white {
+      span {
+        background-color: #fff;
+      }
+    }
+    &_dark {
+      span {
+        background-color: $greyDark;
+      }
+    }
+    span {
+      display: block;
+      width: 24px;
+      height: 1px;
+    }
+  }
+}
